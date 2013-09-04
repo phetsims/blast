@@ -10,7 +10,7 @@ define( function( require ) {
 
   function BlastView( model ) {
     this.model = model;
-    ScreenView.call( this, { renderer: 'svg' } );
+    ScreenView.call( this, { renderer: 'svg', rendererOptions: {cssTransform: true} } );
     this.addChild( new ItemView( model.rectangle ) );
   }
 
