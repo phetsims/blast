@@ -4,13 +4,14 @@ define( function( require ) {
   'use strict';
 
   var ScreenView = require( 'JOIST/ScreenView' );
+  var ItemView = require( 'view/ItemView' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
 
   function BlastView( model ) {
     this.model = model;
     ScreenView.call( this, { renderer: 'svg' } );
-    this.addChild( new Rectangle( 0, 0, 10, 10, {fill: 'red'} ) );
+    this.addChild( new ItemView( model.rectangle ) );
   }
 
   return inherit( ScreenView, BlastView );

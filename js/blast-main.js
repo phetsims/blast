@@ -1,6 +1,6 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-require( [ 'JOIST/SimLauncher', 'JOIST/Sim', 'SCENERY/nodes/Rectangle', 'BlastModel', 'BlastView', 'BlastImages'],
+require( [ 'JOIST/SimLauncher', 'JOIST/Sim', 'SCENERY/nodes/Rectangle', 'model/BlastModel', 'view/BlastView', 'BlastImages'],
   function( SimLauncher, Sim, Rectangle, BlastModel, BlastView, BlastImages ) {
     'use strict';
 
