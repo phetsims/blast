@@ -9,7 +9,7 @@ require( [ 'JOIST/SimLauncher', 'JOIST/Sim', 'SCENERY/nodes/Rectangle', 'model/B
         {
           name: 'Blast',
           icon: new Rectangle( 0, 0, 10, 10, {fill: 'red'} ),
-          createModel: function() {return new BlastModel()},
+          createModel: function() {return new BlastModel();},
           createView: function( model ) {return new BlastView( model );}
         }
       ] ).start();
