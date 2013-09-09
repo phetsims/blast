@@ -29,6 +29,5 @@ require.config( {
     SUN: '../../sun/js'
   },
 
-  //TODO remove this before deploy
   urlArgs: new Date().getTime()  // cache buster to make browser refresh load all included scripts
 } );
