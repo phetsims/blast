@@ -12,7 +12,6 @@ define( function( require ) {
     var itemView = this;
     this.itemModel = itemModel;
     Rectangle.call( this, 0, 0, 10, 10, {x: itemModel.x, y: itemModel.y, fill: 'red'} );
-    console.log( itemModel.x, itemModel.y );
     this.itemModel.xProperty.link( function( x ) {
       itemView.x = x;
     } );

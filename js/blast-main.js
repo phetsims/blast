@@ -1,10 +1,10 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-require( [ 'JOIST/SimLauncher', 'JOIST/Sim', 'SCENERY/nodes/Rectangle', 'model/BlastModel', 'view/BlastView', 'BlastImages'],
-  function( SimLauncher, Sim, Rectangle, BlastModel, BlastView, BlastImages ) {
+require( [ 'JOIST/SimLauncher', 'JOIST/Sim', 'SCENERY/nodes/Rectangle', 'model/BlastModel', 'view/BlastView'],
+  function( SimLauncher, Sim, Rectangle, BlastModel, BlastView ) {
     'use strict';
 
-    SimLauncher.launch( BlastImages, function( images ) {
+    SimLauncher.launch( {imageNames: []}, function( images ) {
       new Sim( 'Blast', [
         {
           name: 'Blast',
