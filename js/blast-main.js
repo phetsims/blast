@@ -4,7 +4,7 @@ require( [ 'JOIST/SimLauncher', 'JOIST/Sim', 'SCENERY/nodes/Rectangle', 'model/B
   function( SimLauncher, Sim, Rectangle, BlastModel, BlastView ) {
     'use strict';
 
-    SimLauncher.launch( {imageNames: []}, function( images ) {
+    SimLauncher.launch( function() {
       new Sim( 'Blast', [
         {
           name: 'Blast',
