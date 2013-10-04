@@ -13,7 +13,6 @@ require.config( {
   paths: {
 
     // plugins
-    i18n: '../../sherpa/i18n-2.0.2',
     image: '../../chipper/requirejs-plugins/image',
     audio: '../../chipper/requirejs-plugins/audio',
 
