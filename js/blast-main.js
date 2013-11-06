@@ -8,8 +8,8 @@ define( function( require ) {
     Sim = require( 'JOIST/Sim' ),
     Screen = require( 'JOIST/Screen' ),
     Rectangle = require( 'SCENERY/nodes/Rectangle' ),
-    BlastModel = require( 'model/BlastModel' ),
-    BlastView = require( 'view/BlastView' );
+    BlastModel = require( 'BLAST/model/BlastModel' ),
+    BlastView = require( 'BLAST/view/BlastView' );
 
   SimLauncher.launch( function() {
     new Sim( 'Blast', [

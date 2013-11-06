@@ -4,7 +4,7 @@ define( function( require ) {
   'use strict';
 
   var ScreenView = require( 'JOIST/ScreenView' );
-  var ItemView = require( 'view/ItemView' );
+  var ItemView = require( 'BLAST/view/ItemView' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
 
