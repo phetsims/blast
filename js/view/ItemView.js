@@ -3,8 +3,6 @@
 define( function( require ) {
   'use strict';
 
-  var ScreenView = require( 'JOIST/ScreenView' );
-  var Node = require( 'SCENERY/nodes/Node' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
 

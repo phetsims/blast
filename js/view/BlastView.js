@@ -6,7 +6,6 @@ define( function( require ) {
   var ScreenView = require( 'JOIST/ScreenView' );
   var ItemView = require( 'BLAST/view/ItemView' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
 
   function BlastView( model ) {
     this.model = model;
