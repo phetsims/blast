@@ -25,7 +25,7 @@
 
   var direction = +1;
   var position = 100;
-  var speed = 2;
+  var speed = 3;
   function step( timestamp ) {
     if ( start === null ) {
       start = timestamp;
@@ -33,7 +33,7 @@
     position = position + speed * direction;
     d.style.left = position + "px";
     requestAnimationFrame( step );
-    if ( position > 500 ) {
+    if ( position > 800 ) {
       direction = -1;
     }
     else if ( position < 0 ) {
