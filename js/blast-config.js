@@ -14,7 +14,6 @@ require.config( {
     text: '../../sherpa/text',
 
     // PhET libs, uppercase names to identify them in require.js imports
-    ASSERT: '../../assert/js',
     AXON: '../../axon/js',
     DOT: '../../dot/js',
     JOIST: '../../joist/js',
