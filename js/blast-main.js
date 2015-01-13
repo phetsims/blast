@@ -14,7 +14,7 @@ define( function( require ) {
   SimLauncher.launch( function() {
     new Sim( 'Blast', [
       new Screen( 'Blast',
-        new Rectangle( 0, 0, 10, 10, {fill: 'red'} ),
+        new Rectangle( 0, 0, 10, 10, { fill: 'red' } ),
         function() {return new BlastModel();},
         function( model ) {return new BlastView( model );}
       )
