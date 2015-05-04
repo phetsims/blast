@@ -21,6 +21,7 @@ require.config( {
     PHET_CORE: '../../phet-core/js',
     BRAND: '../../brand/js',
     PHETCOMMON: '../../phetcommon/js',
+    REPOSITORY: '..',
     SCENERY: '../../scenery/js',
     SCENERY_PHET: '../../scenery-phet/js',
     SUN: '../../sun/js',
