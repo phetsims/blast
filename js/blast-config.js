@@ -20,7 +20,7 @@ require.config( {
     JOIST: '../../joist/js',
     KITE: '../../kite/js',
     PHET_CORE: '../../phet-core/js',
-    BRAND: '../../brand/' + phet.chipper.getBrandName() + '/js',
+    BRAND: '../../brand/' + phet.chipper.brand + '/js',
     PHETCOMMON: '../../phetcommon/js',
     REPOSITORY: '..',
     SCENERY: '../../scenery/js',
