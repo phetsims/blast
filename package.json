@@ -15,9 +15,6 @@
   },
   "phet": {
     "requirejsNamespace": "BLAST",
-    "simTitleStringKey": "BLAST/blast.name",
-    "phetLibs": [
-      "blast"
-    ]
+    "simTitleStringKey": "BLAST/blast.name"
   }
 }
