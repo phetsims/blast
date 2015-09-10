@@ -9,7 +9,7 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var BlastModel = require( 'BLAST/model/BlastModel' );
   var BlastView = require( 'BLAST/view/BlastView' );
-  var title = require( 'string!BLAST/blast.name' );
+  var title = require( 'string!BLAST/blast.title' );
 
   SimLauncher.launch( function() {
     new Sim( title, [
