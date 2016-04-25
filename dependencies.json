@@ -1,5 +1,5 @@
 {
-  "comment": "# blast 0.0.0-dev.5 Mon Apr 25 2016 15:14:56 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# blast 0.0.0-dev.5 Mon Apr 25 2016 15:26:08 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
     "branch": "master"
@@ -9,7 +9,7 @@
     "branch": "master"
   },
   "blast": {
-    "sha": "e088d64ec2ba46bda15b74dd61b2da1d3be66472",
+    "sha": "5b8a11f0f849b9ca8d0a7174b1249bb98f28d4bf",
     "branch": "master"
   },
   "brand": {
