@@ -13,7 +13,7 @@ define( function( require ) {
 
   SimLauncher.launch( function() {
     new Sim( blastTitleString, [
-      new BlastScreen( 'Blast 1', 'red', 'rgb( 151, 208, 255 )' ),
+      new BlastScreen( 'Blast 1', 'red', 'white' ),
       new BlastScreen( 'Blast 2', 'green', 'rgb( 255, 227, 204 )' )
     ] ).start();
   } );

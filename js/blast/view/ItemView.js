@@ -6,10 +6,12 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
 
+  var BLOCK_SIZE = 10;
+
   function ItemView( itemModel, color ) {
     var itemView = this;
     this.itemModel = itemModel;
-    Rectangle.call( this, 0, 0, 10, 10, { x: itemModel.x, y: itemModel.y, fill: color } );
+    Rectangle.call( this, -BLOCK_SIZE / 2, 0, BLOCK_SIZE, BLOCK_SIZE, { x: itemModel.x, y: itemModel.y, fill: color } );
     this.itemModel.xProperty.link( function( x ) {
       itemView.x = x;
     } );
