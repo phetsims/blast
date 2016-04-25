@@ -3,7 +3,7 @@
 define( function( require ) {
   'use strict';
 
-  var ItemModel = require( 'BLAST/model/ItemModel' );
+  var ItemModel = require( 'BLAST/blast/model/ItemModel' );
 
   function BlastModel() {
     this.rectangle = new ItemModel();

@@ -6,21 +6,15 @@ define( function( require ) {
   // modules
   var SimLauncher = require( 'JOIST/SimLauncher' );
   var Sim = require( 'JOIST/Sim' );
-  var Screen = require( 'JOIST/Screen' );
-  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var BlastModel = require( 'BLAST/model/BlastModel' );
-  var BlastView = require( 'BLAST/view/BlastView' );
+  var BlastScreen = require( 'BLAST/blast/BlastScreen' );
 
   // strings
   var blastTitleString = require( 'string!BLAST/blast.title' );
 
   SimLauncher.launch( function() {
     new Sim( blastTitleString, [
-      new Screen( 'Blast',
-        new Rectangle( 0, 0, 10, 10, { fill: 'red' } ),
-        function() {return new BlastModel();},
-        function( model ) {return new BlastView( model );}
-      )
+      new BlastScreen( 'Blast 1', 'red', 'rgb( 151, 208, 255 )' ),
+      new BlastScreen( 'Blast 2', 'green', 'rgb( 255, 227, 204 )' )
     ] ).start();
   } );
 } );

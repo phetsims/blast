@@ -13,7 +13,7 @@ define( function( require ) {
   return inherit( PropertySet, ItemModel, {
     step: function( dt ) {
       this.x = this.x + this.velocity;
-      if ( this.x > 768 ) {
+      if ( this.x > 1024 ) {
         this.velocity = -Math.abs( this.velocity );
       }
       else if ( this.x < 0 ) {
