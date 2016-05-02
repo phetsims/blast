@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var blast = require( 'BLAST/blast' );
   var BlastModel = require( 'BLAST/blast/model/BlastModel' );
   var BlastView = require( 'BLAST/blast/view/BlastView' );
   var inherit = require( 'PHET_CORE/inherit' );
@@ -36,6 +37,8 @@ define( function( require ) {
       { backgroundColor: backgroundColor }
     );
   }
+
+  blast.register( 'BlastScreen', BlastScreen );
 
   return inherit( Screen, BlastScreen );
 } );

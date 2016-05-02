@@ -3,6 +3,8 @@
 define( function( require ) {
   'use strict';
 
+  // modules
+  var blast = require( 'BLAST/blast' );
   var ScreenView = require( 'JOIST/ScreenView' );
   var ItemView = require( 'BLAST/blast/view/ItemView' );
   var inherit = require( 'PHET_CORE/inherit' );
@@ -12,6 +14,8 @@ define( function( require ) {
     ScreenView.call( this, { rendererOptions: { cssTransform: true } } );
     this.addChild( new ItemView( model.rectangle, blockColor ) );
   }
+
+  blast.register( 'BlastView', BlastView );
 
   return inherit( ScreenView, BlastView );
 } );

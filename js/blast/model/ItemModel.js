@@ -3,12 +3,16 @@
 define( function( require ) {
   'use strict';
 
+  // modules
+  var blast = require( 'BLAST/blast' );
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
 
   function ItemModel() {
     PropertySet.call( this, { x: 50, y: 50, velocity: 5 } );
   }
+
+  blast.register( 'ItemModel', ItemModel );
 
   return inherit( PropertySet, ItemModel, {
     step: function( dt ) {

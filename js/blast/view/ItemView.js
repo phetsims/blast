@@ -3,6 +3,8 @@
 define( function( require ) {
   'use strict';
 
+  // modules
+  var blast = require( 'BLAST/blast' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
 
@@ -16,6 +18,8 @@ define( function( require ) {
       itemView.x = x;
     } );
   }
+
+  blast.register( 'ItemView', ItemView );
 
   return inherit( Rectangle, ItemView );
 } );
