@@ -18,8 +18,8 @@ define( function( require ) {
 
     // add 2 instances of the same screen for memory leak testing, see phetsims/tasks#546.
     var screens = [
-      new BlastScreen( 'Blast 1', 'red', 'white' ),
-      new BlastScreen( 'Blast 2', 'green', 'rgb( 255, 227, 204 )' )
+      new BlastScreen( 'Blast 1', { particleColor: 'red', screenBackgroundColor: 'white' } ),
+      new BlastScreen( 'Blast 2', { particleColor: 'green', screenBackgroundColor: 'rgb( 255, 227, 204 )' } )
     ];
 
     new Sim( blastTitleString, screens ).start();

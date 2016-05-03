@@ -18,24 +18,29 @@ define( function( require ) {
 
   /**
    * @param {String} title
-   * @param {String | Color} particleColor
-   * @param {String | Color} screenBackgroundColor
+   * @param {Object} [options]
    * @constructor
    */
-  function BlastScreen( title, particleColor, screenBackgroundColor ) {
+  function BlastScreen( title, options ) {
+
+    options = _.extend( {
+      particleColor: 'black',
+      screenBackgroundColor: 'white'
+    }, options );
+
     Screen.call(
       this,
       title,
       Rectangle.rect( 0, 0, Screen.HOME_SCREEN_ICON_SIZE.width, Screen.HOME_SCREEN_ICON_SIZE.height, { 
-        fill: screenBackgroundColor
+        fill: options.screenBackgroundColor
       } ),
       function() {
         return new BlastModel();
       },
       function( model ) {
-        return new BlastScreenView( model, particleColor );
+        return new BlastScreenView( model, options.particleColor );
       },
-      { backgroundColor: screenBackgroundColor }
+      { backgroundColor: options.screenBackgroundColor }
     );
   }
 
