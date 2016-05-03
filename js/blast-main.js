@@ -2,6 +2,8 @@
 
 /**
  * Main entry point.
+ *
+ * @author Sam Reid
  */
 define( function( require ) {
   'use strict';

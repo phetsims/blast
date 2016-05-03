@@ -2,6 +2,8 @@
 
 /**
  * Particle view.
+ *
+ * @author Sam Reid
  */
 define( function( require ) {
   'use strict';

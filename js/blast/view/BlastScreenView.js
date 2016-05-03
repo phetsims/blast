@@ -2,6 +2,8 @@
 
 /**
  * View for the 'Blast' screen.
+ *
+ * @author Sam Reid
  */
 define( function( require ) {
   'use strict';
