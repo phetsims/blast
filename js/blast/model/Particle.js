@@ -31,7 +31,7 @@ define( function( require ) {
 
   return inherit( PropertySet, Particle, {
 
-    // @public Test for memory leaks, see phetsims/tasks#546.
+    // @public animate particle, changing direction at min/max x
     step: function( dt ) {
       this.x = this.x + this.velocity;
       if ( this.x > 1024 ) {
