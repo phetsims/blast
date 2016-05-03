@@ -15,6 +15,8 @@ define( function( require ) {
   blast.register( 'ItemModel', ItemModel );
 
   return inherit( PropertySet, ItemModel, {
+
+    // Test for memory leak issues, see phetsims/tasks#546.
     step: function( dt ) {
       this.x = this.x + this.velocity;
       if ( this.x > 1024 ) {
