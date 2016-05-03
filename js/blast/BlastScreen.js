@@ -3,9 +3,8 @@
 /**
  * The 'Blast' screen.
  *
- * Author: John Blanco
+ * @author John Blanco
  */
-
 define( function( require ) {
   'use strict';
 
@@ -19,22 +18,24 @@ define( function( require ) {
 
   /**
    * @param {String} title
-   * @param {String | Color} blockColor
+   * @param {String | Color} particleColor
+   * @param {String | Color} screenBackgroundColor
    * @constructor
    */
-  function BlastScreen( title, blockColor, backgroundColor ) {
+  function BlastScreen( title, particleColor, screenBackgroundColor ) {
     Screen.call(
       this,
       title,
-      Rectangle.rect( 0, 0, Screen.HOME_SCREEN_ICON_SIZE.width, Screen.HOME_SCREEN_ICON_SIZE.height, { fill: blockColor } ),
+      Rectangle.rect( 0, 0, Screen.HOME_SCREEN_ICON_SIZE.width, Screen.HOME_SCREEN_ICON_SIZE.height, { 
+        fill: screenBackgroundColor
+      } ),
       function() {
         return new BlastModel();
       },
       function( model ) {
-        return new BlastView( model, blockColor );
+        return new BlastView( model, particleColor );
       },
-      //{ backgroundColor: 'rgb( 151, 208, 255 )' }
-      { backgroundColor: backgroundColor }
+      { backgroundColor: screenBackgroundColor }
     );
   }
 

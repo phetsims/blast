@@ -1,18 +1,25 @@
-// Copyright 2013-2015, University of Colorado Boulder
+// Copyright 2013-2016, University of Colorado Boulder
 
+/**
+ * View for the 'Blast' screen.
+ */
 define( function( require ) {
   'use strict';
 
   // modules
   var blast = require( 'BLAST/blast' );
   var ScreenView = require( 'JOIST/ScreenView' );
-  var ItemView = require( 'BLAST/blast/view/ItemView' );
+  var ParticleNode = require( 'BLAST/blast/view/ParticleNode' );
   var inherit = require( 'PHET_CORE/inherit' );
 
-  function BlastView( model, blockColor ) {
-    this.model = model;
+  /**
+   * @param {BlastModel} model
+   * @param {Color|string} particleColor
+   * @constructor
+   */
+  function BlastView( model, particleColor ) {
     ScreenView.call( this, { rendererOptions: { cssTransform: true } } );
-    this.addChild( new ItemView( model.rectangle, blockColor ) );
+    this.addChild( new ParticleNode( model.particle, particleColor ) );
   }
 
   blast.register( 'BlastView', BlastView );

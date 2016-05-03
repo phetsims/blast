@@ -1,5 +1,8 @@
-// Copyright 2013-2015, University of Colorado Boulder
+// Copyright 2013-2016, University of Colorado Boulder
 
+/**
+ * Particle model.
+ */
 define( function( require ) {
   'use strict';
 
@@ -8,15 +11,25 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
 
-  function ItemModel() {
-    PropertySet.call( this, { x: 50, y: 50, velocity: 5 } );
+  /**
+   * @constructor
+   */
+  function Particle() {
+
+    // @public
+    PropertySet.call( this, {
+      x: 50,
+      velocity: 5
+    } );
+
+    this.y = 50; // @public y does not change
   }
 
-  blast.register( 'ItemModel', ItemModel );
+  blast.register( 'Particle', Particle );
 
-  return inherit( PropertySet, ItemModel, {
+  return inherit( PropertySet, Particle, {
 
-    // Test for memory leak issues, see phetsims/tasks#546.
+    // @public Test for memory leaks, see phetsims/tasks#546.
     step: function( dt ) {
       this.x = this.x + this.velocity;
       if ( this.x > 1024 ) {

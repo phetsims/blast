@@ -1,5 +1,8 @@
-// Copyright 2013-2015, University of Colorado Boulder
+// Copyright 2013-2016, University of Colorado Boulder
 
+/**
+ * Main entry point.
+ */
 define( function( require ) {
   'use strict';
 
@@ -12,9 +15,13 @@ define( function( require ) {
   var blastTitleString = require( 'string!BLAST/blast.title' );
 
   SimLauncher.launch( function() {
-    new Sim( blastTitleString, [
+
+    // add 2 instances of the same screen for memory leak testing, see phetsims/tasks#546.
+    var screens = [
       new BlastScreen( 'Blast 1', 'red', 'white' ),
       new BlastScreen( 'Blast 2', 'green', 'rgb( 255, 227, 204 )' )
-    ] ).start();
+    ];
+
+    new Sim( blastTitleString, screens ).start();
   } );
 } );
