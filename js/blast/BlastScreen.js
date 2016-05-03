@@ -11,7 +11,7 @@ define( function( require ) {
   // modules
   var blast = require( 'BLAST/blast' );
   var BlastModel = require( 'BLAST/blast/model/BlastModel' );
-  var BlastView = require( 'BLAST/blast/view/BlastView' );
+  var BlastScreenView = require( 'BLAST/blast/view/BlastScreenView' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Screen = require( 'JOIST/Screen' );
@@ -33,7 +33,7 @@ define( function( require ) {
         return new BlastModel();
       },
       function( model ) {
-        return new BlastView( model, particleColor );
+        return new BlastScreenView( model, particleColor );
       },
       { backgroundColor: screenBackgroundColor }
     );

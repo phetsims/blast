@@ -17,12 +17,12 @@ define( function( require ) {
    * @param {Color|string} particleColor
    * @constructor
    */
-  function BlastView( model, particleColor ) {
+  function BlastScreenView( model, particleColor ) {
     ScreenView.call( this, { rendererOptions: { cssTransform: true } } );
     this.addChild( new ParticleNode( model.particle, particleColor ) );
   }
 
-  blast.register( 'BlastView', BlastView );
+  blast.register( 'BlastScreenView', BlastScreenView );
 
-  return inherit( ScreenView, BlastView );
+  return inherit( ScreenView, BlastScreenView );
 } );
