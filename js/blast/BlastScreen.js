@@ -17,31 +17,24 @@ define( function( require ) {
   var Screen = require( 'JOIST/Screen' );
 
   /**
-   * @param {String} title
    * @param {Object} [options]
    * @constructor
    */
-  function BlastScreen( title, options ) {
+  function BlastScreen( options ) {
 
     options = _.extend( {
-      particleColor: 'black',
-      screenBackgroundColor: 'white'
+      particleColor: 'black'
     }, options );
 
-    Screen.call(
-      this,
-      title,
-      Rectangle.rect( 0, 0, Screen.HOME_SCREEN_ICON_SIZE.width, Screen.HOME_SCREEN_ICON_SIZE.height, { 
-        fill: options.screenBackgroundColor
-      } ),
-      function() {
-        return new BlastModel();
-      },
-      function( model ) {
-        return new BlastScreenView( model, options.particleColor );
-      },
-      { backgroundColor: options.screenBackgroundColor }
-    );
+    assert && assert( !options.homeScreenIcon );
+    options.homeScreenIcon = Rectangle.rect( 0, 0, Screen.HOME_SCREEN_ICON_SIZE.width, Screen.HOME_SCREEN_ICON_SIZE.height, {
+      fill: options.backgroundColor
+    } );
+
+    Screen.call( this,
+      function() { return new BlastModel(); },
+      function( model ) { return new BlastScreenView( model, options.particleColor ); },
+      options );
   }
 
   blast.register( 'BlastScreen', BlastScreen );
