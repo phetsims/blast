@@ -29,9 +29,9 @@ define( function( require ) {
       fill: color
     } );
 
-    var thisNode = this;
+    var self = this;
     particle.xProperty.link( function( x ) {
-      thisNode.x = x;
+      self.x = x;
     } );
   }
 
