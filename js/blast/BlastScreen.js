@@ -27,7 +27,7 @@ define( function( require ) {
     }, options );
 
     assert && assert( !options.homeScreenIcon );
-    options.homeScreenIcon = Rectangle.rect( 0, 0, Screen.HOME_SCREEN_ICON_SIZE.width, Screen.HOME_SCREEN_ICON_SIZE.height, {
+    options.homeScreenIcon = Rectangle.rect( 0, 0, Screen.MINIMUM_HOME_SCREEN_ICON_SIZE.width, Screen.MINIMUM_HOME_SCREEN_ICON_SIZE.height, {
       fill: options.backgroundColor
     } );
 
