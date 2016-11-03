@@ -24,6 +24,11 @@ define( function( require ) {
 
   return inherit( Object, BlastModel, {
 
+    // @public
+    reset: function() {
+      this.particle.reset();
+    },
+
     // @public animate the particle
     step: function( dt ) {
       this.particle.step( dt );

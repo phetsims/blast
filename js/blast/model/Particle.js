@@ -11,7 +11,7 @@ define( function( require ) {
   // modules
   var blast = require( 'BLAST/blast' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var PropertySet = require( 'AXON/PropertySet' );
+  var Property = require( 'AXON/Property' );
 
   /**
    * @constructor
@@ -19,26 +19,31 @@ define( function( require ) {
   function Particle() {
 
     // @public
-    PropertySet.call( this, {
-      x: 50,
-      velocity: 5
-    } );
+    this.xProperty = new Property( 50 );
+    this.velocityProperty = new Property( 5 );
 
-    this.y = 50; // @public y does not change
+    // @public (read-only) y is constant
+    this.y = 50;
   }
 
   blast.register( 'Particle', Particle );
 
-  return inherit( PropertySet, Particle, {
+  return inherit( Object, Particle, {
+
+    // @public
+    reset: function() {
+      this.xProperty.reset();
+      this.velocityProperty.reset();
+    },
 
     // @public animate particle, changing direction at min/max x
     step: function( dt ) {
-      this.x = this.x + this.velocity;
-      if ( this.x > 1024 ) {
-        this.velocity = -Math.abs( this.velocity );
+      this.xProperty.value = this.xProperty.value + this.velocityProperty.value;
+      if ( this.xProperty.value > 1024 ) {
+        this.velocityProperty.value = -Math.abs( this.velocityProperty.value );
       }
-      else if ( this.x < 0 ) {
-        this.velocity = +Math.abs( this.velocity );
+      else if ( this.xProperty.value < 0 ) {
+        this.velocityProperty.value = +Math.abs( this.velocityProperty.value );
       }
     }
   } );
