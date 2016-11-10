@@ -20,7 +20,7 @@ define( function( require ) {
    * @constructor
    */
   function BlastScreenView( model, particleColor ) {
-    ScreenView.call( this, { rendererOptions: { cssTransform: true } } );
+    ScreenView.call( this, { cssTransform: true } );
     this.addChild( new ParticleNode( model.particle, particleColor ) );
   }
 
