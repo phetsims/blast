@@ -12,6 +12,8 @@ define( function( require ) {
   var SimLauncher = require( 'JOIST/SimLauncher' );
   var Sim = require( 'JOIST/Sim' );
   var BlastScreen = require( 'BLAST/blast/BlastScreen' );
+  var Property = require( 'AXON/Property' );
+  var Color = require( 'SCENERY/util/Color' );
 
   // strings
   var blastTitleString = require( 'string!BLAST/blast.title' );
@@ -22,12 +24,12 @@ define( function( require ) {
     var screens = [
       new BlastScreen( {
         name: 'Blast 1',
-        backgroundColor: 'white',
+        backgroundColorProperty: new Property( Color.toColor( 'white' ) ),
         particleColor: 'red'
       } ),
       new BlastScreen( {
         name: 'Blast 2',
-        backgroundColor: 'rgb( 255, 227, 204 )',
+        backgroundColorProperty: new Property( Color.toColor( 'rgb( 255, 227, 204 )' ) ),
         particleColor: 'green'
       } )
     ];
