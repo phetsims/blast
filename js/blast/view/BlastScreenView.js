@@ -13,6 +13,7 @@ define( function( require ) {
   var ScreenView = require( 'JOIST/ScreenView' );
   var ParticleNode = require( 'BLAST/blast/view/ParticleNode' );
   var inherit = require( 'PHET_CORE/inherit' );
+  var Node = require( 'SCENERY/nodes/Node' );
 
   /**
    * @param {BlastModel} model
@@ -21,7 +22,17 @@ define( function( require ) {
    */
   function BlastScreenView( model, particleColor ) {
     ScreenView.call( this, { cssTransform: true } );
-    this.addChild( new ParticleNode( model.particle, particleColor ) );
+
+    for ( var i = 0; i < 6; i++ ) {
+      var container = new Node( { x: i * 20 } );
+      this.addChild( container );
+      container.addChild( new ParticleNode( model.particle, null, { y: 100, renderer: 'svg' } ) );
+      container.addChild( new ParticleNode( model.particle, null, { y: 200, renderer: 'canvas' } ) );
+      container.addChild( new ParticleNode( model.particle, particleColor, { y: 400, renderer: 'dom' } ) );
+      container.addChild( new ParticleNode( model.particle, particleColor, { y: 300, renderer: 'webgl' } ) );
+      container.addChild( new ParticleNode( model.particle, particleColor, { y: 400, renderer: 'svg' } ) );
+      container.addChild( new ParticleNode( model.particle, particleColor, { y: 500, renderer: 'canvas' } ) );
+    }
   }
 
   blast.register( 'BlastScreenView', BlastScreenView );

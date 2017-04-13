@@ -20,7 +20,7 @@ define( function( require ) {
 
     // @public
     this.xProperty = new Property( 50 );
-    this.velocityProperty = new Property( 5 );
+    this.velocityProperty = new Property( 200 );
 
     // @public (read-only) y is constant
     this.y = 50;
@@ -38,7 +38,7 @@ define( function( require ) {
 
     // @public animate particle, changing direction at min/max x
     step: function( dt ) {
-      this.xProperty.value = this.xProperty.value + this.velocityProperty.value;
+      this.xProperty.value = this.xProperty.value + dt * this.velocityProperty.value;
       if ( this.xProperty.value > 1024 ) {
         this.velocityProperty.value = -Math.abs( this.velocityProperty.value );
       }
