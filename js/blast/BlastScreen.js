@@ -34,8 +34,8 @@ define( function( require ) {
     } );
 
     Screen.call( this,
-      function() { return new BlastModel( tandem ); },
-      function( model ) { return new BlastScreenView( model, options.particleColor, tandem ); },
+      function() { return new BlastModel( tandem.createTandem( 'model' ) ); },
+      function( model ) { return new BlastScreenView( model, options.particleColor, tandem.createTandem( 'view' ) ); },
       options );
   }
 
