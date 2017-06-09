@@ -14,10 +14,11 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
 
   /**
+   * @param {Tandem} tandem
    * @constructor
    */
-  function BlastModel() {
-    this.particle = new Particle(); // @public
+  function BlastModel( tandem ) {
+    this.particle = new Particle( tandem ); // @public
   }
 
   blast.register( 'BlastModel', BlastModel );

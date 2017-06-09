@@ -17,11 +17,12 @@ define( function( require ) {
   /**
    * @param {BlastModel} model
    * @param {Color|string} particleColor
+   * @param {Tandem} tandem
    * @constructor
    */
-  function BlastScreenView( model, particleColor ) {
-    ScreenView.call( this, { cssTransform: true } );
-    this.addChild( new ParticleNode( model.particle, particleColor ) );
+  function BlastScreenView( model, particleColor, tandem ) {
+    ScreenView.call( this, { cssTransform: true, tandem: tandem } );
+    this.addChild( new ParticleNode( model.particle, particleColor, tandem.createTandem( 'particleNode' ) ) );
   }
 
   blast.register( 'BlastScreenView', BlastScreenView );

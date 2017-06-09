@@ -19,14 +19,16 @@ define( function( require ) {
   /**
    * @param {Particle} particle
    * @param {String|color} color
+   * @param {Tandem} tandem
    * @constructor
    */
-  function ParticleNode( particle, color ) {
+  function ParticleNode( particle, color, tandem ) {
 
     Rectangle.call( this, -PARTICLE_SIZE / 2, 0, PARTICLE_SIZE, PARTICLE_SIZE, {
       x: particle.x,
       y: particle.y,
-      fill: color
+      fill: color,
+      tandem: tandem
     } );
 
     var self = this;

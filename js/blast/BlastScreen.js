@@ -17,13 +17,15 @@ define( function( require ) {
   var Screen = require( 'JOIST/Screen' );
 
   /**
+   * @param {Tandem} tandem
    * @param {Object} [options]
    * @constructor
    */
-  function BlastScreen( options ) {
+  function BlastScreen( tandem, options ) {
 
     options = _.extend( {
-      particleColor: 'black'
+      particleColor: 'black',
+      tandem: tandem
     }, options );
 
     assert && assert( !options.homeScreenIcon );
@@ -32,8 +34,8 @@ define( function( require ) {
     } );
 
     Screen.call( this,
-      function() { return new BlastModel(); },
-      function( model ) { return new BlastScreenView( model, options.particleColor ); },
+      function() { return new BlastModel( tandem ); },
+      function( model ) { return new BlastScreenView( model, options.particleColor, tandem ); },
       options );
   }
 

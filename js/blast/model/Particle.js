@@ -12,15 +12,23 @@ define( function( require ) {
   var blast = require( 'BLAST/blast' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Property = require( 'AXON/Property' );
+  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
 
   /**
    * @constructor
+   * @param {Tandem} tandem
    */
-  function Particle() {
+  function Particle( tandem ) {
 
     // @public
-    this.xProperty = new Property( 50 );
-    this.velocityProperty = new Property( 5 );
+    this.xProperty = new Property( 50, {
+      tandem: tandem.createTandem( 'xProperty' ),
+      phetioValueType: TNumber()
+    } );
+    this.velocityProperty = new Property( 5, {
+      tandem: tandem.createTandem( 'velocityProperty' ),
+      phetioValueType: TNumber()
+    } );
 
     // @public (read-only) y is constant
     this.y = 50;
