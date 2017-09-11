@@ -9,10 +9,9 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var NumberProperty = require( 'AXON/NumberProperty' );
   var blast = require( 'BLAST/blast' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Property = require( 'AXON/Property' );
-  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
 
   /**
    * @constructor
@@ -21,13 +20,11 @@ define( function( require ) {
   function Particle( tandem ) {
 
     // @public
-    this.xProperty = new Property( 50, {
-      tandem: tandem.createTandem( 'xProperty' ),
-      phetioValueType: TNumber()
+    this.xProperty = new NumberProperty( 50, {
+      tandem: tandem.createTandem( 'xProperty' )
     } );
-    this.velocityProperty = new Property( 5, {
-      tandem: tandem.createTandem( 'velocityProperty' ),
-      phetioValueType: TNumber()
+    this.velocityProperty = new NumberProperty( 5, {
+      tandem: tandem.createTandem( 'velocityProperty' )
     } );
 
     // @public (read-only) y is constant
