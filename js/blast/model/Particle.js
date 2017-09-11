@@ -9,9 +9,9 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var NumberProperty = require( 'AXON/NumberProperty' );
   var blast = require( 'BLAST/blast' );
   var inherit = require( 'PHET_CORE/inherit' );
+  var NumberProperty = require( 'AXON/NumberProperty' );
 
   /**
    * @constructor

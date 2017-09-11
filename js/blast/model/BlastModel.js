@@ -10,8 +10,8 @@ define( function( require ) {
 
   // modules
   var blast = require( 'BLAST/blast' );
-  var Particle = require( 'BLAST/blast/model/Particle' );
   var inherit = require( 'PHET_CORE/inherit' );
+  var Particle = require( 'BLAST/blast/model/Particle' );
 
   /**
    * @param {Tandem} tandem

@@ -9,10 +9,10 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var SimLauncher = require( 'JOIST/SimLauncher' );
-  var Sim = require( 'JOIST/Sim' );
   var BlastScreen = require( 'BLAST/blast/BlastScreen' );
   var Property = require( 'AXON/Property' );
+  var Sim = require( 'JOIST/Sim' );
+  var SimLauncher = require( 'JOIST/SimLauncher' );
   var Tandem = require( 'TANDEM/Tandem' );
 
   // strings

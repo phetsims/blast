@@ -10,9 +10,9 @@ define( function( require ) {
 
   // modules
   var blast = require( 'BLAST/blast' );
-  var ScreenView = require( 'JOIST/ScreenView' );
-  var ParticleNode = require( 'BLAST/blast/view/ParticleNode' );
   var inherit = require( 'PHET_CORE/inherit' );
+  var ParticleNode = require( 'BLAST/blast/view/ParticleNode' );
+  var ScreenView = require( 'JOIST/ScreenView' );
 
   /**
    * @param {BlastModel} model
