@@ -20,7 +20,7 @@ define( function( require ) {
 
   SimLauncher.launch( function() {
 
-    var tandem = Tandem.createRootTandem();
+    var tandem = Tandem.rootTandem;
 
     // add 2 instances of the same screen for memory leak testing, see phetsims/tasks#546.
     var screens = [
