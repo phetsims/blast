@@ -13,7 +13,8 @@
     "requirejsNamespace": "BLAST",
     "runnable": true,
     "supportedBrands": [
-      "phet"
+      "phet",
+      "adapted-from-phet"
     ],
     "simulation": true
   }
