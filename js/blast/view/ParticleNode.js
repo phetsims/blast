@@ -14,7 +14,7 @@ define( require => {
   const Rectangle = require( 'SCENERY/nodes/Rectangle' );
 
   // constants
-  var PARTICLE_SIZE = 10;
+  const PARTICLE_SIZE = 10;
 
   /**
    * @param {Particle} particle
@@ -31,7 +31,7 @@ define( require => {
       tandem: tandem
     } );
 
-    var self = this;
+    const self = this;
     particle.xProperty.link( function( x ) {
       self.x = x;
     } );
