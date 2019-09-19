@@ -5,14 +5,14 @@
  *
  * @author Sam Reid
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var blast = require( 'BLAST/blast' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var ParticleNode = require( 'BLAST/blast/view/ParticleNode' );
-  var ScreenView = require( 'JOIST/ScreenView' );
+  const blast = require( 'BLAST/blast' );
+  const inherit = require( 'PHET_CORE/inherit' );
+  const ParticleNode = require( 'BLAST/blast/view/ParticleNode' );
+  const ScreenView = require( 'JOIST/ScreenView' );
 
   /**
    * @param {BlastModel} model

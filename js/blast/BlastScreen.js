@@ -5,16 +5,16 @@
  *
  * @author John Blanco
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var blast = require( 'BLAST/blast' );
-  var BlastModel = require( 'BLAST/blast/model/BlastModel' );
-  var BlastScreenView = require( 'BLAST/blast/view/BlastScreenView' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var Screen = require( 'JOIST/Screen' );
+  const blast = require( 'BLAST/blast' );
+  const BlastModel = require( 'BLAST/blast/model/BlastModel' );
+  const BlastScreenView = require( 'BLAST/blast/view/BlastScreenView' );
+  const inherit = require( 'PHET_CORE/inherit' );
+  const Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  const Screen = require( 'JOIST/Screen' );
 
   /**
    * @param {Tandem} tandem

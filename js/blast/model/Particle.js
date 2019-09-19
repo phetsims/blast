@@ -5,13 +5,13 @@
  *
  * @author Sam Reid
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var blast = require( 'BLAST/blast' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var NumberProperty = require( 'AXON/NumberProperty' );
+  const blast = require( 'BLAST/blast' );
+  const inherit = require( 'PHET_CORE/inherit' );
+  const NumberProperty = require( 'AXON/NumberProperty' );
 
   /**
    * @constructor

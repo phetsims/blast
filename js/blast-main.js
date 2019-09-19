@@ -5,18 +5,18 @@
  *
  * @author Sam Reid
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var BlastScreen = require( 'BLAST/blast/BlastScreen' );
-  var Property = require( 'AXON/Property' );
-  var Sim = require( 'JOIST/Sim' );
-  var SimLauncher = require( 'JOIST/SimLauncher' );
-  var Tandem = require( 'TANDEM/Tandem' );
+  const BlastScreen = require( 'BLAST/blast/BlastScreen' );
+  const Property = require( 'AXON/Property' );
+  const Sim = require( 'JOIST/Sim' );
+  const SimLauncher = require( 'JOIST/SimLauncher' );
+  const Tandem = require( 'TANDEM/Tandem' );
 
   // strings
-  var blastTitleString = require( 'string!BLAST/blast.title' );
+  const blastTitleString = require( 'string!BLAST/blast.title' );
 
   SimLauncher.launch( function() {
 

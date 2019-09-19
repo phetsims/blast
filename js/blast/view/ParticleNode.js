@@ -5,13 +5,13 @@
  *
  * @author Sam Reid
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var blast = require( 'BLAST/blast' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  const blast = require( 'BLAST/blast' );
+  const inherit = require( 'PHET_CORE/inherit' );
+  const Rectangle = require( 'SCENERY/nodes/Rectangle' );
 
   // constants
   var PARTICLE_SIZE = 10;
