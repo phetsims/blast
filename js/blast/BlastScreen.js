@@ -13,6 +13,7 @@ define( require => {
   const BlastModel = require( 'BLAST/blast/model/BlastModel' );
   const BlastScreenView = require( 'BLAST/blast/view/BlastScreenView' );
   const inherit = require( 'PHET_CORE/inherit' );
+  const merge = require( 'PHET_CORE/merge' );
   const Rectangle = require( 'SCENERY/nodes/Rectangle' );
   const Screen = require( 'JOIST/Screen' );
 
@@ -23,7 +24,7 @@ define( require => {
    */
   function BlastScreen( tandem, options ) {
 
-    options = _.extend( {
+    options = merge( {
       particleColor: 'black',
       tandem: tandem
     }, options );
