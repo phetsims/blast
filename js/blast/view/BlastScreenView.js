@@ -5,27 +5,24 @@
  *
  * @author Sam Reid
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const blast = require( 'BLAST/blast' );
-  const inherit = require( 'PHET_CORE/inherit' );
-  const ParticleNode = require( 'BLAST/blast/view/ParticleNode' );
-  const ScreenView = require( 'JOIST/ScreenView' );
+import ScreenView from '../../../../joist/js/ScreenView.js';
+import inherit from '../../../../phet-core/js/inherit.js';
+import blast from '../../blast.js';
+import ParticleNode from './ParticleNode.js';
 
-  /**
-   * @param {BlastModel} model
-   * @param {Color|string} particleColor
-   * @param {Tandem} tandem
-   * @constructor
-   */
-  function BlastScreenView( model, particleColor, tandem ) {
-    ScreenView.call( this, { cssTransform: true, tandem: tandem } );
-    this.addChild( new ParticleNode( model.particle, particleColor, tandem.createTandem( 'particleNode' ) ) );
-  }
+/**
+ * @param {BlastModel} model
+ * @param {Color|string} particleColor
+ * @param {Tandem} tandem
+ * @constructor
+ */
+function BlastScreenView( model, particleColor, tandem ) {
+  ScreenView.call( this, { cssTransform: true, tandem: tandem } );
+  this.addChild( new ParticleNode( model.particle, particleColor, tandem.createTandem( 'particleNode' ) ) );
+}
 
-  blast.register( 'BlastScreenView', BlastScreenView );
+blast.register( 'BlastScreenView', BlastScreenView );
 
-  return inherit( ScreenView, BlastScreenView );
-} );
+inherit( ScreenView, BlastScreenView );
+export default BlastScreenView;

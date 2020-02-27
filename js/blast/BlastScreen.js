@@ -5,42 +5,39 @@
  *
  * @author John Blanco
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const blast = require( 'BLAST/blast' );
-  const BlastModel = require( 'BLAST/blast/model/BlastModel' );
-  const BlastScreenView = require( 'BLAST/blast/view/BlastScreenView' );
-  const inherit = require( 'PHET_CORE/inherit' );
-  const merge = require( 'PHET_CORE/merge' );
-  const Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  const Screen = require( 'JOIST/Screen' );
+import Screen from '../../../joist/js/Screen.js';
+import inherit from '../../../phet-core/js/inherit.js';
+import merge from '../../../phet-core/js/merge.js';
+import Rectangle from '../../../scenery/js/nodes/Rectangle.js';
+import blast from '../blast.js';
+import BlastModel from './model/BlastModel.js';
+import BlastScreenView from './view/BlastScreenView.js';
 
-  /**
-   * @param {Tandem} tandem
-   * @param {Object} [options]
-   * @constructor
-   */
-  function BlastScreen( tandem, options ) {
+/**
+ * @param {Tandem} tandem
+ * @param {Object} [options]
+ * @constructor
+ */
+function BlastScreen( tandem, options ) {
 
-    options = merge( {
-      particleColor: 'black',
-      tandem: tandem
-    }, options );
+  options = merge( {
+    particleColor: 'black',
+    tandem: tandem
+  }, options );
 
-    assert && assert( !options.homeScreenIcon );
-    options.homeScreenIcon = Rectangle.rect( 0, 0, Screen.MINIMUM_HOME_SCREEN_ICON_SIZE.width, Screen.MINIMUM_HOME_SCREEN_ICON_SIZE.height, {
-      fill: options.backgroundColor
-    } );
+  assert && assert( !options.homeScreenIcon );
+  options.homeScreenIcon = Rectangle.rect( 0, 0, Screen.MINIMUM_HOME_SCREEN_ICON_SIZE.width, Screen.MINIMUM_HOME_SCREEN_ICON_SIZE.height, {
+    fill: options.backgroundColor
+  } );
 
-    Screen.call( this,
-      function() { return new BlastModel( tandem.createTandem( 'model' ) ); },
-      function( model ) { return new BlastScreenView( model, options.particleColor, tandem.createTandem( 'view' ) ); },
-      options );
-  }
+  Screen.call( this,
+    function() { return new BlastModel( tandem.createTandem( 'model' ) ); },
+    function( model ) { return new BlastScreenView( model, options.particleColor, tandem.createTandem( 'view' ) ); },
+    options );
+}
 
-  blast.register( 'BlastScreen', BlastScreen );
+blast.register( 'BlastScreen', BlastScreen );
 
-  return inherit( Screen, BlastScreen );
-} );
+inherit( Screen, BlastScreen );
+export default BlastScreen;

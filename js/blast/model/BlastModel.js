@@ -5,34 +5,30 @@
  *
  * @author Sam Reid
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const blast = require( 'BLAST/blast' );
-  const inherit = require( 'PHET_CORE/inherit' );
-  const Particle = require( 'BLAST/blast/model/Particle' );
+import inherit from '../../../../phet-core/js/inherit.js';
+import blast from '../../blast.js';
+import Particle from './Particle.js';
 
-  /**
-   * @param {Tandem} tandem
-   * @constructor
-   */
-  function BlastModel( tandem ) {
-    this.particle = new Particle( tandem ); // @public
+/**
+ * @param {Tandem} tandem
+ * @constructor
+ */
+function BlastModel( tandem ) {
+  this.particle = new Particle( tandem ); // @public
+}
+
+blast.register( 'BlastModel', BlastModel );
+
+export default inherit( Object, BlastModel, {
+
+  // @public
+  reset: function() {
+    this.particle.reset();
+  },
+
+  // @public animate the particle
+  step: function( dt ) {
+    this.particle.step( dt );
   }
-
-  blast.register( 'BlastModel', BlastModel );
-
-  return inherit( Object, BlastModel, {
-
-    // @public
-    reset: function() {
-      this.particle.reset();
-    },
-
-    // @public animate the particle
-    step: function( dt ) {
-      this.particle.step( dt );
-    }
-  } );
 } );
