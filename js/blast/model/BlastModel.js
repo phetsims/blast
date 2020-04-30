@@ -20,7 +20,7 @@ function BlastModel( tandem ) {
 
 blast.register( 'BlastModel', BlastModel );
 
-export default inherit( Object, BlastModel, {
+inherit( Object, BlastModel, {
 
   // @public
   reset: function() {
@@ -32,3 +32,5 @@ export default inherit( Object, BlastModel, {
     this.particle.step( dt );
   }
 } );
+
+export default BlastModel;

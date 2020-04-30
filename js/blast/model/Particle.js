@@ -30,7 +30,7 @@ function Particle( tandem ) {
 
 blast.register( 'Particle', Particle );
 
-export default inherit( Object, Particle, {
+inherit( Object, Particle, {
 
   // @public
   reset: function() {
@@ -49,3 +49,5 @@ export default inherit( Object, Particle, {
     }
   }
 } );
+
+export default Particle;
