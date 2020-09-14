@@ -7,31 +7,31 @@
  */
 
 import Screen from '../../../joist/js/Screen.js';
-import inherit from '../../../phet-core/js/inherit.js';
 import merge from '../../../phet-core/js/merge.js';
 import blast from '../blast.js';
 import BlastModel from './model/BlastModel.js';
 import BlastScreenView from './view/BlastScreenView.js';
 
-/**
- * @param {Tandem} tandem
- * @param {Object} [options]
- * @constructor
- */
-function BlastScreen( tandem, options ) {
+class BlastScreen extends Screen {
 
-  options = merge( {
-    particleColor: 'black',
-    tandem: tandem
-  }, options );
+  /**
+   * @param {Tandem} tandem
+   * @param {Object} [options]
+   */
+  constructor( tandem, options ) {
 
-  Screen.call( this,
-    function() { return new BlastModel( tandem.createTandem( 'model' ) ); },
-    function( model ) { return new BlastScreenView( model, options.particleColor, tandem.createTandem( 'view' ) ); },
-    options );
+    options = merge( {
+      particleColor: 'black',
+      tandem: tandem
+    }, options );
+
+    super(
+      function() { return new BlastModel( tandem.createTandem( 'model' ) ); },
+      function( model ) { return new BlastScreenView( model, options.particleColor, tandem.createTandem( 'view' ) ); },
+      options
+    );
+  }
 }
 
 blast.register( 'BlastScreen', BlastScreen );
-
-inherit( Screen, BlastScreen );
 export default BlastScreen;

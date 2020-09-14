@@ -6,31 +6,28 @@
  * @author Sam Reid
  */
 
-import inherit from '../../../../phet-core/js/inherit.js';
 import blast from '../../blast.js';
 import Particle from './Particle.js';
 
-/**
- * @param {Tandem} tandem
- * @constructor
- */
-function BlastModel( tandem ) {
-  this.particle = new Particle( tandem ); // @public
+class BlastModel {
+
+  /**
+   * @param {Tandem} tandem
+   */
+  constructor( tandem ) {
+    this.particle = new Particle( tandem ); // @public
+  }
+
+  // @public
+  reset() {
+    this.particle.reset();
+  }
+
+  // @public animate the particle
+  step( dt ) {
+    this.particle.step( dt );
+  }
 }
 
 blast.register( 'BlastModel', BlastModel );
-
-inherit( Object, BlastModel, {
-
-  // @public
-  reset: function() {
-    this.particle.reset();
-  },
-
-  // @public animate the particle
-  step: function( dt ) {
-    this.particle.step( dt );
-  }
-} );
-
 export default BlastModel;
