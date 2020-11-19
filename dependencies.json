@@ -40,22 +40,7 @@
     "sha": "981e1e72d1f3a0500170421668c5f0dee9538a94",
     "branch": "master"
   },
-  "phet-io-website": {
-    "sha": "495377c999e2878273350e24fce152bfc7ec81c2",
-    "branch": "master"
-  },
-  "phet-io-wrapper-classroom-activity": {
-    "sha": "282e9bbe7f298b4114a1a8e611be76d097418c03",
-    "branch": "master"
-  },
-  "phet-io-wrapper-lab-book": {
-    "sha": "f63832380c6993cc918782a92084c1616e75ac95",
-    "branch": "master"
-  },
-  "phet-io-wrapper-sonification": {
-    "sha": "daff06bce27cdaa2940a9586dc732bb6c1b609ce",
-    "branch": "master"
-  },
+
   "phet-io-wrappers": {
     "sha": "772374f6792544774d7c1988710339eb3d0143c8",
     "branch": "master"
