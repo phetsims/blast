@@ -15,7 +15,7 @@ import BlastScreen from './blast/BlastScreen.js';
 
 const blastTitleString = blastStrings.blast.title;
 
-simLauncher.launch( function() {
+simLauncher.launch( () => {
 
   const tandem = Tandem.ROOT;
 

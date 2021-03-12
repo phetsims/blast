@@ -26,8 +26,8 @@ class BlastScreen extends Screen {
     }, options );
 
     super(
-      function() { return new BlastModel( tandem.createTandem( 'model' ) ); },
-      function( model ) { return new BlastScreenView( model, options.particleColor, tandem.createTandem( 'view' ) ); },
+      () => new BlastModel( tandem.createTandem( 'model' ) ),
+      model => new BlastScreenView( model, options.particleColor, tandem.createTandem( 'view' ) ),
       options
     );
   }
