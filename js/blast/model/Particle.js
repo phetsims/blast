@@ -3,7 +3,7 @@
 /**
  * Particle model.
  *
- * @author Sam Reid
+ * @author Sam Reid (PhET Interactive Simulations)
  */
 
 import NumberProperty from '../../../../axon/js/NumberProperty.js';

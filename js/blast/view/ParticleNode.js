@@ -3,7 +3,7 @@
 /**
  * Particle view.
  *
- * @author Sam Reid
+ * @author Sam Reid (PhET Interactive Simulations)
  */
 
 import Rectangle from '../../../../scenery/js/nodes/Rectangle.js';

@@ -3,7 +3,7 @@
 /**
  * Model for the 'Blast' screen.
  *
- * @author Sam Reid
+ * @author Sam Reid (PhET Interactive Simulations)
  */
 
 import blast from '../../blast.js';
