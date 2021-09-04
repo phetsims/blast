@@ -9,6 +9,9 @@
 import blast from '../../blast.js';
 import Particle from './Particle.js';
 
+const x: number = 'hello';
+console.log( x );
+
 class BlastModel {
 
   /**
