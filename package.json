@@ -17,8 +17,7 @@
       "adapted-from-phet"
     ],
     "simulation": true,
-    "readmeCreatedManually": true,
-    "typescript": true
+    "readmeCreatedManually": true
   },
   "eslintConfig": {
     "extends": "../chipper/eslint/sim_eslintrc.js"
