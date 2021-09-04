@@ -32,7 +32,7 @@ simLauncher.launch( () => {
       {
         name: 'Blast 2',
         backgroundColorProperty: new Property( 'rgb( 255, 227, 204 )' ),
-        particleColor: 'green'
+        particleColor: 'blue'
       } )
   ];
 
