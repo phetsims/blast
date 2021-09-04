@@ -9,7 +9,7 @@
 import blast from '../../blast.js';
 import Particle from './Particle.js';
 
-const x: number = 7;
+const x: number = 8;
 console.log( x );
 
 class BlastModel {
