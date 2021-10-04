@@ -1,7 +1,7 @@
 // Copyright 2013-2021, University of Colorado Boulder
 
 /**
- * Particle model.
+ * Particle that moves back and forth horizontally.
  *
  * @author Sam Reid (PhET Interactive Simulations)
  */
@@ -28,13 +28,20 @@ class Particle {
     this.y = 50;
   }
 
-  // @public
+  /**
+   * Reset the Particlet to its original position and velocity.
+   * @public
+   */
   reset() {
     this.xProperty.reset();
     this.velocityProperty.reset();
   }
 
-  // @public animate particle, changing direction at min/max x
+  /**
+   * Animate particle, changing direction at min/max x
+   * @param {number} dt
+   * @public
+   */
   step( dt ) {
     this.xProperty.value = this.xProperty.value + this.velocityProperty.value;
     if ( this.xProperty.value > 1024 ) {

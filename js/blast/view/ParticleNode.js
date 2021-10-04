@@ -16,13 +16,12 @@ class ParticleNode extends Rectangle {
 
   /**
    * @param {Particle} particle
-   * @param {String|color} color
+   * @param {string|Color} color
    * @param {Tandem} tandem
    */
   constructor( particle, color, tandem ) {
 
     super( -PARTICLE_SIZE / 2, 0, PARTICLE_SIZE, PARTICLE_SIZE, {
-      x: particle.x,
       y: particle.y,
       fill: color,
       tandem: tandem

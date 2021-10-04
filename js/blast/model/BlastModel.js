@@ -14,15 +14,24 @@ class BlastModel {
    * @param {Tandem} tandem
    */
   constructor( tandem ) {
-    this.particle = new Particle( tandem ); // @public
+
+    // @public
+    this.particle = new Particle( tandem );
   }
 
-  // @public
+  /**
+   * Reset the model.
+   * @public
+   */
   reset() {
     this.particle.reset();
   }
 
-  // @public animate the particle
+  /**
+   * Move forward in time by the specified amount.
+   * @param {number} dt
+   * @public
+   */
   step( dt ) {
     this.particle.step( dt );
   }
