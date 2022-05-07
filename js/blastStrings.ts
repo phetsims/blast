@@ -9,7 +9,7 @@ import blast from './blast.js';
 
 type StringsType = {
   'blast': {
-    'title': string
+    'title': string;
   }
 };
 
