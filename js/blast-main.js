@@ -10,8 +10,8 @@ import Property from '../../axon/js/Property.js';
 import Sim from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
 import Tandem from '../../tandem/js/Tandem.js';
-import blastStrings from './blastStrings.js';
 import BlastScreen from './blast/BlastScreen.js';
+import blastStrings from './blastStrings.js';
 
 const blastTitleString = blastStrings.blast.title;
 
