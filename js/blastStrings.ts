@@ -11,7 +11,7 @@ import blast from './blast.js';
 type StringsType = {
   'blast': {
     'title': string;
-    'titleProperty': TReadOnlyProperty<string>;
+    'titleStringProperty': TReadOnlyProperty<string>;
   }
 };
 
