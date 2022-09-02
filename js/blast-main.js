@@ -13,7 +13,7 @@ import Tandem from '../../tandem/js/Tandem.js';
 import BlastScreen from './blast/BlastScreen.js';
 import blastStrings from './blastStrings.js';
 
-const blastTitleString = blastStrings.blast.title;
+const blastTitleStringProperty = blastStrings.blast.titleStringProperty;
 
 simLauncher.launch( () => {
 
@@ -36,5 +36,5 @@ simLauncher.launch( () => {
       } )
   ];
 
-  new Sim( blastTitleString, screens ).start();
+  new Sim( blastTitleStringProperty, screens ).start();
 } );
