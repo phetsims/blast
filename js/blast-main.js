@@ -11,9 +11,9 @@ import Sim from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import BlastScreen from './blast/BlastScreen.js';
-import blastStrings from './blastStrings.js';
+import BlastStrings from './BlastStrings.js';
 
-const blastTitleStringProperty = blastStrings.blast.titleStringProperty;
+const blastTitleStringProperty = BlastStrings.blast.titleStringProperty;
 
 simLauncher.launch( () => {
 

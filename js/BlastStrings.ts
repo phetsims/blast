@@ -15,8 +15,8 @@ type StringsType = {
   }
 };
 
-const blastStrings = getStringModule( 'BLAST' ) as StringsType;
+const BlastStrings = getStringModule( 'BLAST' ) as StringsType;
 
-blast.register( 'blastStrings', blastStrings );
+blast.register( 'BlastStrings', BlastStrings );
 
-export default blastStrings;
+export default BlastStrings;
