@@ -23,14 +23,14 @@ simLauncher.launch( () => {
   const screens = [
     new BlastScreen( tandem.createTandem( 'blast1Screen' ),
       {
-        name: 'Blast 1',
+        name: new Property( 'Blast 1' ),
         backgroundColorProperty: new Property( 'white' ),
         particleColor: 'red'
       }
     ),
     new BlastScreen( tandem.createTandem( 'blast2Screen' ),
       {
-        name: 'Blast 2',
+        name: new Property( 'Blast 2' ),
         backgroundColorProperty: new Property( 'rgb( 255, 227, 204 )' ),
         particleColor: 'blue'
       } )
