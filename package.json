@@ -18,7 +18,11 @@
     ],
     "simulation": true,
     "readmeCreatedManually": true,
-    "supportsOutputJS": true
+    "supportsOutputJS": true,
+    "screenNameKeys": [
+      "BLAST/screen.blast1",
+      "BLAST/screen.blast2"
+    ]
   },
   "eslintConfig": {
     "extends": "../chipper/eslint/sim_eslintrc.js"

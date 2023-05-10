@@ -12,6 +12,12 @@ type StringsType = {
   'blast': {
     'title': string;
     'titleStringProperty': LinkableProperty<string>;
+  };
+  'screen': {
+    'blast1': string;
+    'blast1StringProperty': LinkableProperty<string>;
+    'blast2': string;
+    'blast2StringProperty': LinkableProperty<string>;
   }
 };
 
