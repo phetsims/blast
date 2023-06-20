@@ -5,19 +5,19 @@
  */
 /* eslint-disable */
 import getStringModule from '../../chipper/js/getStringModule.js';
-import LinkableProperty from '../../axon/js/LinkableProperty.js';
+import type LocalizedStringProperty from '../../chipper/js/LocalizedStringProperty.js';
 import blast from './blast.js';
 
 type StringsType = {
   'blast': {
     'title': string;
-    'titleStringProperty': LinkableProperty<string>;
+    'titleStringProperty': LocalizedStringProperty;
   };
   'screen': {
     'blast1': string;
-    'blast1StringProperty': LinkableProperty<string>;
+    'blast1StringProperty': LocalizedStringProperty;
     'blast2': string;
-    'blast2StringProperty': LinkableProperty<string>;
+    'blast2StringProperty': LocalizedStringProperty;
   }
 };
 
