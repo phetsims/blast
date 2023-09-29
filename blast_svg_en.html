@@ -18,20 +18,21 @@
   window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                                  window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-  var start = null;
+  let start = null;
 
-  var d = document.getElementById( "rect" );
-  d.style.position = "absolute";
+  const d = document.getElementById( 'rect' );
+  d.style.position = 'absolute';
 
-  var direction = +1;
-  var position = 100;
-  var speed = 3;
+  let direction = 1;
+  let position = 100;
+  const speed = 3;
+
   function step( timestamp ) {
     if ( start === null ) {
       start = timestamp;
     }
     position = position + speed * direction;
-    d.style.left = position + "px";
+    d.style.left = position + 'px';
     requestAnimationFrame( step );
     if ( position > 800 ) {
       direction = -1;
