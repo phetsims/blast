@@ -23,8 +23,5 @@
       "BLAST/screen.blast1",
       "BLAST/screen.blast2"
     ]
-  },
-  "eslintConfig": {
-    "extends": "../chipper/eslint/sim_eslintrc.js"
   }
 }
