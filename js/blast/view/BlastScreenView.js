@@ -7,7 +7,6 @@
  */
 
 import ScreenView from '../../../../joist/js/ScreenView.js';
-import blast from '../../blast.js';
 import ParticleNode from './ParticleNode.js';
 
 class BlastScreenView extends ScreenView {
@@ -23,5 +22,4 @@ class BlastScreenView extends ScreenView {
   }
 }
 
-blast.register( 'BlastScreenView', BlastScreenView );
 export default BlastScreenView;

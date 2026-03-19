@@ -26,6 +26,4 @@ type StringsType = {
 
 const BlastStrings = getStringModule( 'BLAST' ) as StringsType;
 
-blast.register( 'BlastStrings', BlastStrings );
-
 export default BlastStrings;

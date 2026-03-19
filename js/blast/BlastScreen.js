@@ -8,7 +8,6 @@
 
 import Screen from '../../../joist/js/Screen.js';
 import merge from '../../../phet-core/js/merge.js';
-import blast from '../blast.js';
 import BlastModel from './model/BlastModel.js';
 import BlastScreenView from './view/BlastScreenView.js';
 
@@ -33,5 +32,4 @@ class BlastScreen extends Screen {
   }
 }
 
-blast.register( 'BlastScreen', BlastScreen );
 export default BlastScreen;

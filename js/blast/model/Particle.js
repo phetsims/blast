@@ -7,7 +7,6 @@
  */
 
 import NumberProperty from '../../../../axon/js/NumberProperty.js';
-import blast from '../../blast.js';
 
 class Particle {
 
@@ -53,5 +52,4 @@ class Particle {
   }
 }
 
-blast.register( 'Particle', Particle );
 export default Particle;

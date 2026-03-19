@@ -7,7 +7,6 @@
  */
 
 import Rectangle from '../../../../scenery/js/nodes/Rectangle.js';
-import blast from '../../blast.js';
 
 // constants
 const PARTICLE_SIZE = 10;
@@ -33,5 +32,4 @@ class ParticleNode extends Rectangle {
   }
 }
 
-blast.register( 'ParticleNode', ParticleNode );
 export default ParticleNode;

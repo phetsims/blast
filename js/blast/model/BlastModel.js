@@ -5,7 +5,6 @@
  * @author Sam Reid (PhET Interactive Simulations)
  */
 
-import blast from '../../blast.js';
 import Particle from './Particle.js';
 
 class BlastModel {
@@ -37,5 +36,4 @@ class BlastModel {
   }
 }
 
-blast.register( 'BlastModel', BlastModel );
 export default BlastModel;
